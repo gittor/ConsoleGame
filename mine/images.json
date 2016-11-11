@@ -1,0 +1,16 @@
+[
+    {
+        "content": "                   \u2664 \u2664 \u2664 This is the SweepMine Game! \u2664 \u2664 \u2664                   ", 
+        "name": "StartTitle", 
+        "attr": 131072
+    }, 
+    {
+        "content": "\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350\u534d\u5350", 
+        "name": "mineTitle0"
+    }, 
+    {
+        "content": "                        \u91cd\u65b0\u5f00\u59cb(r)|\u6807\u8bb0(f)|\u6253\u5f00(k)\u2585 \u2586 \u2587 \u8fd4\u56de(q)", 
+        "name": "mineTitle1", 
+        "attr": 131072
+    }
+]
