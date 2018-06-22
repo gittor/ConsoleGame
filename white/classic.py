@@ -40,11 +40,6 @@ def init():
             line[i][j].pos = [j*Block.width,win_size[1]-(i+1)*Block.height]
             line[i][j].color = white
         line[i][random.randint(0,3)].color = black
-    for j in range(0,4):
-        if line[4][j].color==black:
-            line[4][j].color=blue
-        if line[3][j].color==black:
-            line[3][j].color=red
 class Block():
     width = win_size[0]//4
     height = win_size[1]//4
@@ -81,7 +76,6 @@ def main():
                     pos = pygame.mouse.get_pos()
                     r,c = (win_size[1]-pos[1]+moved)/Block.height,pos[0]/Block.width
                     r,c = int(r), int(c)
-                    print(r, c)
                     for i in range(0,r):
                         con = True
                         for j in range(0,4):
