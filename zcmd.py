@@ -1,11 +1,12 @@
 from monotonic import monotonic
-import os,sys
+import os,sys,uuid
 
+run_file_name = str(uuid.uuid4())
 def run(cmd):
-	code = os.system('%s > zcmd_run_180de67b5fcb.tmp 2>&1'%(cmd))
-	with open('zcmd_run_180de67b5fcb.tmp') as fin:
+	code = os.system('%s > %s 2>&1'%(cmd, run_file_name))
+	with open(run_file_name) as fin:
 		msg = fin.read()
-	os.remove('zcmd_run_180de67b5fcb.tmp')
+	os.remove(run_file_name)
 	return (code, msg)
 
 def where(fname):
