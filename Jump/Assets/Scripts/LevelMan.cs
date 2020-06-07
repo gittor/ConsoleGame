@@ -41,7 +41,7 @@ public class LevelMan : MonoBehaviour
     int stageIndex = 0;
     public void CreateStageAndChangeDirection()
     {
-        stageIndex = (stageIndex + 1) % 2;
+        //stageIndex = (stageIndex + 1) % 2;
         GameObject prefab = this.StagePrefabs[stageIndex];
         GameObject stage = Instantiate(prefab);
         GameObject last = this.stages.Count == 0 ? this.gameObject : this.stages[this.stages.Count - 1];
@@ -53,10 +53,9 @@ public class LevelMan : MonoBehaviour
 
         this.stages.Add(stage);
 
-        Vector3 pos = Camera.main.transform.position;
-        pos.z = (last.transform.position.z + stage.transform.position.z) / 2;
-        //pos.y = (last.transform.position.y + stage.transform.position.y) / 2;
-        AnimMove.MoveTo(Camera.main.gameObject, 1, pos);
+        Vector3 pos = last.transform.position;
+        pos.y = Camera.main.transform.position.y;
+        AnimMove.MoveTo(Camera.main.gameObject, 2, pos);
 
         if (direction==Vector3.forward)
         {
